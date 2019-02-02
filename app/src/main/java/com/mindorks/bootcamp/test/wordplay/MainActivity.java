@@ -2,10 +2,13 @@ package com.mindorks.bootcamp.test.wordplay;
 
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.mindorks.bootcamp.test.wordplay.models.WordHolderDomain;
 
 import java.io.IOException;
 
@@ -44,7 +47,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void getNewWord() {
-
+        WordHolderDomain domain = dictionary.getAWordAndMeaning();
+        if(domain != null) {
+            Log.e("minodrks error", domain.getmWord());
+            tvWord.setText(domain.getmWord());
+            tvMeaning.setText(domain.getmMeaning());
+        }
     }
 
 
