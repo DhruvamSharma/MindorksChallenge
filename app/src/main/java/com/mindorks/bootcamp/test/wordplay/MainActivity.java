@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
     private Button btRandom;
     private WordDictionary dictionary;
     private static final String failMessage = "Could not load dictionary";
-    public static final String START_MESSAGE = "Find as many words as possible that can be formed by adding one letter to <big>%s</big> (but that do not contain the substring %s).";
+    public static final String START_MESSAGE = "Welcome to WordPlay. This is a word meaning application. ";
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

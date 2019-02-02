@@ -49,7 +49,7 @@ public class WordDictionary {
         if(wordToDefinitionMap.get(false).size() != 0) {
             ArrayList<WordHolderDomain> domainList = wordToDefinitionMap.get(false);
             if(domainList != null) {
-                WordHolderDomain domain = domainList.get(getRandomIntegerBetweenRange(0, wordToDefinitionMap.size()-1));
+                WordHolderDomain domain = domainList.get(getRandomIntegerBetweenRange(0, wordToDefinitionMap.get(false).size()-1));
                 if(domain != null) {
                     ArrayList<WordHolderDomain> domainListToAdd;
                     if(wordToDefinitionMap.get(true) == null) {
