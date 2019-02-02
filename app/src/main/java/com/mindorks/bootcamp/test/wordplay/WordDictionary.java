@@ -1,14 +1,10 @@
 package com.mindorks.bootcamp.test.wordplay;
 
 import android.content.Context;
-import android.util.JsonReader;
 import android.util.Log;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
-import com.google.gson.JsonArray;
-import com.google.gson.JsonElement;
-import com.google.gson.JsonStreamParser;
 import com.mindorks.bootcamp.test.wordplay.models.WordHolderDomain;
 
 import java.io.BufferedReader;
@@ -20,8 +16,7 @@ import java.util.HashMap;
 
 public class WordDictionary {
 
-    private HashMap<String, WordHolderDomain> wordToDefinitionMap;
-    private ArrayList<String> wordList;
+    private HashMap<Boolean, ArrayList<WordHolderDomain>> wordToDefinitionMap;
 
     WordDictionary(Context context) throws IOException {
         InputStream streamForReading = context.getResources().
@@ -30,44 +25,56 @@ public class WordDictionary {
                 new InputStreamReader(streamForReading));
         Gson gson = new GsonBuilder().create();
         wordToDefinitionMap = new HashMap<>();
-        wordList = new ArrayList<>();
+        ArrayList<WordHolderDomain> domainListToAdd;
         WordHolderDomain[] domains = gson.fromJson(reader, WordHolderDomain[].class);
         for (WordHolderDomain domain : domains) {
             if(domain != null) {
-                wordToDefinitionMap.put(domain.getmWord(), domain);
-                wordList.add(domain.getmWord());
+                if(wordToDefinitionMap.get(false) == null) {
+                    domainListToAdd = new ArrayList<>();
+                    domainListToAdd.add(domain);
+                    wordToDefinitionMap.put(false, domainListToAdd);
+                } else {
+                    domainListToAdd = wordToDefinitionMap.get(false);
+                    domainListToAdd.add(domain);
+                    wordToDefinitionMap.put(false, domainListToAdd);
+                }
             }
         }
+        Log.e("mindorks error", wordToDefinitionMap.get(false).size() + " is size");
         streamForReading.close();
         reader.close();
     }
 
-    private boolean isGoodWord(String word) {
-        if (wordToDefinitionMap.containsKey(word)) {
-            WordHolderDomain domain = wordToDefinitionMap.get(word);
-            if (domain != null && !domain.ismRead()) {
-                return true;
-            } else{
-                return  false;
+    WordHolderDomain getAWordAndMeaning() {
+        if(wordToDefinitionMap.get(false).size() != 0) {
+            ArrayList<WordHolderDomain> domainList = wordToDefinitionMap.get(false);
+            if(domainList != null) {
+                WordHolderDomain domain = domainList.get(getRandomIntegerBetweenRange(0, wordToDefinitionMap.size()-1));
+                if(domain != null) {
+                    ArrayList<WordHolderDomain> domainListToAdd;
+                    if(wordToDefinitionMap.get(true) == null) {
+                        domainListToAdd = new ArrayList<>();
+                    } else {
+                        domainListToAdd = wordToDefinitionMap.get(true);
+                    }
+                    if( domainListToAdd != null) {
+                        domainListToAdd.add(domain);
+                        wordToDefinitionMap.put(true, domainListToAdd);
+                        domainList.remove(domain);
+                        wordToDefinitionMap.put(false, domainList);
+                        return domain;
+                    } else {
+                        return null;
+                    }
+                } else {
+                    return null;
+                }
+            } else {
+                return  null;
             }
         } else {
-            return false;
+            return new WordHolderDomain();
         }
-    }
-
-    WordHolderDomain getAWordAndMeaning() {
-        if(wordToDefinitionMap.size() != 0) {
-            WordHolderDomain domain = wordToDefinitionMap.get(wordList
-                    .get(getRandomIntegerBetweenRange(0, wordToDefinitionMap.size()-1)));
-            if(domain != null && isGoodWord(domain.getmWord())) {
-                domain.setmRead(true);
-                wordToDefinitionMap.put(domain.getmWord(), domain);
-                return domain;
-            } else {
-                return null;
-            }
-        }
-        return  null;
     }
 
     private int getRandomIntegerBetweenRange(double min, double max){

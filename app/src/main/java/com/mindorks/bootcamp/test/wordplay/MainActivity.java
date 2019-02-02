@@ -49,9 +49,12 @@ public class MainActivity extends AppCompatActivity {
     private void getNewWord() {
         WordHolderDomain domain = dictionary.getAWordAndMeaning();
         if(domain != null) {
-            Log.e("minodrks error", domain.getmWord());
-            tvWord.setText(domain.getmWord());
-            tvMeaning.setText(domain.getmMeaning());
+            if(domain.getmWord() != null && !domain.getmWord().equals("")) {
+                tvWord.setText(domain.getmWord());
+                tvMeaning.setText(domain.getmMeaning());
+            } else {
+                Toast.makeText(this, "No more words", Toast.LENGTH_SHORT).show();
+            }
         }
     }
 
