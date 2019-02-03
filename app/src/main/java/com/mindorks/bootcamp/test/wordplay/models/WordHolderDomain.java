@@ -10,7 +10,6 @@ public class WordHolderDomain {
     @Expose
     @SerializedName("meaning")
     private String mMeaning;
-    private boolean mRead = false;
 
     public String getmWord() {
         return mWord;
@@ -24,15 +23,4 @@ public class WordHolderDomain {
         return mMeaning;
     }
 
-    public void setmMeaning(String meaning) {
-        this.mMeaning = mMeaning;
-    }
-
-    public boolean ismRead() {
-        return mRead;
-    }
-
-    public void setmRead(boolean read) {
-        this.mRead = mRead;
-    }
 }

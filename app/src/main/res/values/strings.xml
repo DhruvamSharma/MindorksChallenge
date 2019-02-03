@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">WordPlay</string>
+    <string name="random_btn_text">Random</string>
 </resources>
