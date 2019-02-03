@@ -15,7 +15,6 @@ import java.io.IOException;
 public class MainActivity extends AppCompatActivity {
 
     private TextView tvWord, tvMeaning;
-    private Button btRandom;
     private WordDictionary dictionary;
     private static final String failMessage = "Could not load dictionary";
     public static final String START_MESSAGE = "Welcome to WordPlay. This is a word meaning application. ";
@@ -30,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         tvWord = findViewById(R.id.tv_word);
         tvMeaning = findViewById(R.id.tv_meaning);
 
-        btRandom = findViewById(R.id.btn_random);
+        Button btRandom = findViewById(R.id.btn_random);
         btRandom.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

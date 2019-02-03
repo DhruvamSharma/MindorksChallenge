@@ -14,10 +14,21 @@ import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.HashMap;
 
+/**
+ * This class manages the json parsing and
+ * the logic for the application.
+ */
 public class WordDictionary {
 
     private HashMap<Boolean, ArrayList<WordHolderDomain>> wordToDefinitionMap;
 
+    /**
+     * Constructor that initialises the wordplay app
+     * And Parses json file
+     * And initialises the wordToDefinitionMap.
+     * @param context
+     * @throws IOException
+     */
     WordDictionary(Context context) throws IOException {
         InputStream streamForReading = context.getResources().
                 openRawResource(R.raw.words);
@@ -45,38 +56,46 @@ public class WordDictionary {
         reader.close();
     }
 
+    /**
+     * This method gets the word and meaning to display
+     * n the application.
+     * @return WordHolderDomain
+     */
     WordHolderDomain getAWordAndMeaning() {
-        if(wordToDefinitionMap.get(false).size() != 0) {
-            ArrayList<WordHolderDomain> domainList = wordToDefinitionMap.get(false);
-            if(domainList != null) {
-                WordHolderDomain domain = domainList.get(getRandomIntegerBetweenRange(0, wordToDefinitionMap.get(false).size()-1));
-                if(domain != null) {
-                    ArrayList<WordHolderDomain> domainListToAdd;
-                    if(wordToDefinitionMap.get(true) == null) {
-                        domainListToAdd = new ArrayList<>();
-                    } else {
-                        domainListToAdd = wordToDefinitionMap.get(true);
-                    }
-                    if( domainListToAdd != null) {
-                        domainListToAdd.add(domain);
-                        wordToDefinitionMap.put(true, domainListToAdd);
-                        domainList.remove(domain);
-                        wordToDefinitionMap.put(false, domainList);
-                        return domain;
-                    } else {
-                        return null;
-                    }
+        ArrayList<WordHolderDomain> currentList = wordToDefinitionMap.get(false);
+        if(currentList != null && currentList.size() != 0) {
+            WordHolderDomain domain = currentList.get(
+                    getRandomIntegerBetweenRange(0, currentList.size()-1));
+            if(domain != null) {
+                ArrayList<WordHolderDomain> domainListToAdd;
+                if(wordToDefinitionMap.get(true) == null) {
+                    domainListToAdd = new ArrayList<>();
+                } else {
+                    domainListToAdd = wordToDefinitionMap.get(true);
+                }
+                if( domainListToAdd != null) {
+                    domainListToAdd.add(domain);
+                    wordToDefinitionMap.put(true, domainListToAdd);
+                    currentList.remove(domain);
+                    wordToDefinitionMap.put(false, currentList);
+                    return domain;
                 } else {
                     return null;
                 }
             } else {
-                return  null;
+                return null;
             }
         } else {
             return new WordHolderDomain();
         }
     }
 
+    /**
+     * This method generates a random number.
+     * @param min
+     * @param max
+     * @return
+     */
     private int getRandomIntegerBetweenRange(double min, double max){
         return (int)((Math.random()*((max-min)+1))+min);
     }

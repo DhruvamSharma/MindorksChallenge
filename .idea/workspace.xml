@@ -11,25 +11,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bb773f5d-097a-428b-aa38-ee7d9a64baa9" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/font/noto_sans.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/values-v23/colors.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/values-v23/styles.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/values/font_certs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/values/preloaded_fonts.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/4.6/taskHistory/taskHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/mindorks/bootcamp/test/wordplay/MainActivity.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/mindorks/bootcamp/test/wordplay/MainActivity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/mindorks/bootcamp/test/wordplay/WordDictionary.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/mindorks/bootcamp/test/wordplay/WordDictionary.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/com/mindorks/bootcamp/test/wordplay/models/WordHolderDomain.java" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/com/mindorks/bootcamp/test/wordplay/models/WordHolderDomain.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/colors.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/styles.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,7 +43,7 @@
           <entry key="json" value="3" />
           <entry key="pro" value="1" />
           <entry key="properties" value="1" />
-          <entry key="xml" value="8" />
+          <entry key="xml" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -73,36 +55,46 @@
           <entry key="PLAIN_TEXT" value="1" />
           <entry key="ProGuard File" value="1" />
           <entry key="Properties" value="1" />
-          <entry key="XML" value="8" />
+          <entry key="XML" value="9" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="java" value="2467" />
-          <entry key="xml" value="95" />
+          <entry key="xml" value="110" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JAVA" value="2467" />
-          <entry key="XML" value="95" />
+          <entry key="XML" value="110" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mindorks/bootcamp/test/wordplay/MainActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="157">
-              <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+            <state relative-caret-position="180">
+              <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
               <folding>
                 <element signature="e#1083#1231#0" expanded="true" />
                 <element signature="e#1230#1231#0" expanded="true" />
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="465">
+              <caret line="31" column="44" lean-forward="true" selection-start-line="31" selection-start-column="44" selection-end-line="31" selection-end-column="44" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -151,7 +143,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/mindorks/bootcamp/test/wordplay/WordDictionary.java" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/colors.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/mindorks/bootcamp/test/wordplay/models/WordHolderDomain.java" />
@@ -159,6 +150,7 @@
         <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values-v23/colors.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/com/mindorks/bootcamp/test/wordplay/MainActivity.java" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml" />
       </list>
     </option>
   </component>
@@ -257,6 +249,12 @@
               <item name="mindorks-android-bootcamp-assignment-project" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="res" type="d4f16f75:AndroidResFolderNode" />
+            </path>
+            <path>
+              <item name="mindorks-android-bootcamp-assignment-project" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="res" type="d4f16f75:AndroidResFolderNode" />
+              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
             </path>
             <path>
               <item name="mindorks-android-bootcamp-assignment-project" type="1abcf292:AndroidViewProjectNode" />
@@ -401,8 +399,9 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" sideWeight="0.49910232" visible="true" weight="0.3297568" />
+      <window_info content_ui="combo" id="Project" sideWeight="0.49910232" visible="true" weight="0.3297568" />
       <window_info id="Structure" sideWeight="0.50089765" side_tool="true" weight="0.3297568" />
       <window_info id="Build Variants" side_tool="true" />
       <window_info id="Image Layers" />
@@ -419,7 +418,7 @@
       <window_info anchor="bottom" id="Event Log" side_tool="true" weight="0.32891566" />
       <window_info anchor="bottom" id="Flutter Performance" side_tool="true" />
       <window_info anchor="bottom" id="Build" weight="0.32891566" />
-      <window_info anchor="bottom" id="Android Profiler" />
+      <window_info anchor="bottom" id="Android Profiler" weight="0.32891566" />
       <window_info anchor="right" id="Device File Explorer" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" />
       <window_info anchor="right" id="Gradle" />
@@ -455,18 +454,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="43" lean-forward="true" selection-start-line="30" selection-start-column="43" selection-end-line="30" selection-end-column="43" />
-          <folding>
-            <element signature="e#665#683#0" expanded="true" />
-            <element signature="e#1524#1549#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mindorks/bootcamp/test/wordplay/models/WordHolderDomain.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -524,14 +511,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/com/mindorks/bootcamp/test/wordplay/MainActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="157">
-          <caret line="21" column="13" lean-forward="true" selection-start-line="21" selection-start-column="13" selection-end-line="21" selection-end-column="13" />
+        <state relative-caret-position="180">
+          <caret line="46" column="5" selection-start-line="46" selection-start-column="5" selection-end-line="46" selection-end-column="5" />
           <folding>
             <element signature="e#1083#1231#0" expanded="true" />
             <element signature="e#1230#1231#0" expanded="true" />
           </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_main.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="44" lean-forward="true" selection-start-line="31" selection-start-column="44" selection-end-line="31" selection-end-column="44" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
     </entry>
   </component>
   <component name="masterDetails">
